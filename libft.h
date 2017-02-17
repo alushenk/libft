@@ -15,6 +15,7 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <wchar.h>
 
 typedef struct		s_list
 {
@@ -75,7 +76,7 @@ char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_itoa(int n);
-void				ft_putchar(char c);
+void				ft_putchar(int c);
 void				ft_putstr(char const *s);
 void				ft_putendl(char const *s);
 void				ft_putnbr(int n);
@@ -97,5 +98,15 @@ int					ft_islower(int c);
 int					ft_isspace(int c);
 int					ft_isupper(int c);
 int					ft_isxdigit(int c);
+/*
+** ADDITIONAL FUNCTIONS
+*/
+void				print_mem_bytes(void *adress, ssize_t size);
+void				ft_putstrn(char const *s, int n);
+size_t				ft_putwcharn(char *s, size_t n);
+wchar_t				*ft_wstrdup(wchar_t *s1);
+wchar_t				*ft_wstrcpy(wchar_t *dst, wchar_t *src);
+size_t				ft_wstrlen(wchar_t *str);
+char				*ft_strnjoin(char *s1, char *s2, size_t len1, size_t len2);
 
 #endif

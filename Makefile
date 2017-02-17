@@ -75,7 +75,14 @@ SRC =	ft_memset.c \
 		ft_islower.c \
 		ft_isupper.c \
 		ft_isspace.c \
-		ft_isxdigit.c
+		ft_isxdigit.c \
+		print_mem_bytes.c \
+		ft_putstrn.c \
+		ft_putwcharn.c \
+		ft_wstrdup.c \
+		ft_wstrcpy.c \
+		ft_strnjoin.c
+
 
 OBJ = $(SRC:.c=.o)
 

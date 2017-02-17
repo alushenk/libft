@@ -1,26 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strnjoin.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alushenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/26 12:55:54 by alushenk          #+#    #+#             */
-/*   Updated: 2016/11/26 12:55:56 by alushenk         ###   ########.fr       */
+/*   Created: 2017/02/15 19:50:13 by alushenk          #+#    #+#             */
+/*   Updated: 2017/02/15 19:53:29 by alushenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strnjoin(char *s1, char *s2, size_t len1, size_t len2)
 {
-	if (!n)
-		return (0);
-	n--;
-	while (*s1 == *s2 && *s1 && *s2 && n--)
+	char	*result;
+	size_t	j;
+	size_t	i;
+
+	result = NULL;
+	if (!s1)
+		return (NULL);
+	result = ft_strnew(len1 + len2);
+	if (result)
 	{
-		s1++;
-		s2++;
+		j = 0;
+		while (len1--)
+		{
+			result[j] = s1[j];
+			j++;
+		}
+		i = 0;
+		while (len2--)
+		{
+			result[j] = s2[i];
+			j++;
+			i++;
+		}
 	}
-	return ((unsigned char)*s1 - (unsigned char)*s2);
+	return (result);
 }

@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putstrn.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alushenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/26 12:55:54 by alushenk          #+#    #+#             */
-/*   Updated: 2016/11/26 12:55:56 by alushenk         ###   ########.fr       */
+/*   Created: 2017/02/15 11:36:40 by alushenk          #+#    #+#             */
+/*   Updated: 2017/02/15 11:36:44 by alushenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+void	ft_putstrn(char const *s, int n)
 {
-	if (!n)
-		return (0);
-	n--;
-	while (*s1 == *s2 && *s1 && *s2 && n--)
+	if (s)
 	{
-		s1++;
-		s2++;
+		while (n--)
+		{
+			ft_putchar(*s);
+			s++;
+		}
 	}
-	return ((unsigned char)*s1 - (unsigned char)*s2);
 }

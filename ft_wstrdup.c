@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_wstrdup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alushenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/26 12:55:54 by alushenk          #+#    #+#             */
-/*   Updated: 2016/11/26 12:55:56 by alushenk         ###   ########.fr       */
+/*   Created: 2017/02/15 19:49:40 by alushenk          #+#    #+#             */
+/*   Updated: 2017/02/15 19:49:55 by alushenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+wchar_t		*ft_wstrdup(wchar_t *s1)
 {
-	if (!n)
-		return (0);
-	n--;
-	while (*s1 == *s2 && *s1 && *s2 && n--)
+	wchar_t *ptr;
+
+	if (s1)
 	{
-		s1++;
-		s2++;
+		ptr = (wchar_t*)malloc(sizeof(wchar_t) * (ft_wstrlen(s1) + 1));
+		if (ptr)
+			return (ft_wstrcpy(ptr, s1));
 	}
-	return ((unsigned char)*s1 - (unsigned char)*s2);
+	return (NULL);
 }
