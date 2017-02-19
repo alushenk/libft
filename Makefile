@@ -81,7 +81,8 @@ SRC =	ft_memset.c \
 		ft_putwcharn.c \
 		ft_wstrdup.c \
 		ft_wstrcpy.c \
-		ft_strnjoin.c
+		ft_strnjoin.c \
+		atoi_skip.c
 
 
 OBJ = $(SRC:.c=.o)
