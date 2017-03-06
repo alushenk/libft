@@ -97,7 +97,7 @@ $(NAME): $(OBJ)
 	ranlib $(NAME)
 
 %.o: %.c
-	gcc $(HEAD) $(CFLAGS) -o $@ -c $<
+	gcc $(CFLAGS) -o $@ -c $<
 
 clean:
 	rm -f $(OBJ)
