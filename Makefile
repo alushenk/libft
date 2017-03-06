@@ -12,7 +12,8 @@
 
 NAME = libft.a
 
-SRC =	ft_memset.c \
+SRC =	print_mem_bytes.c \
+		ft_memset.c \
 		ft_bzero.c \
 		ft_memcpy.c \
 		ft_memccpy.c \
@@ -76,7 +77,6 @@ SRC =	ft_memset.c \
 		ft_isupper.c \
 		ft_isspace.c \
 		ft_isxdigit.c \
-		print_mem_bytes.c \
 		ft_putstrn.c \
 		ft_putwcharn.c \
 		ft_wstrdup.c \
