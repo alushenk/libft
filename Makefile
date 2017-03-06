@@ -92,22 +92,17 @@ CFLAGS = -c -Wall -Wextra -Werror
 all: $(NAME)
 	
 $(NAME): $(OBJ)
-	#@echo "compiling libft sources.."
 	gcc $(CFLAGS) $(SRC) -I libft.h
-	#@echo "archiving libft.."
 	ar rc $(NAME) $(OBJ)
-	#@echo "indexing libft.."
 	ranlib $(NAME)
 
 %.o: %.c
 	gcc $(HEAD) $(CFLAGS) -o $@ -c $<
 
 clean:
-	#@echo "removing libft objects.."
 	rm -f $(OBJ)
 
 fclean: clean
-	#@echo "removing libft.a"
 	rm -f $(NAME)
 
 re: fclean all
