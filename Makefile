@@ -92,12 +92,11 @@ CFLAGS = -c -Wall -Wextra -Werror
 all: $(NAME)
 	
 $(NAME): $(OBJ)
-	gcc $(CFLAGS) $(SRC) -I libft.h
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
 %.o: %.c
-	gcc $(HEAD) $(CFLAGS) -o $@ $<
+	gcc $(CFLAGS) -o $@ $<
 
 clean:
 	rm -f $(OBJ)
