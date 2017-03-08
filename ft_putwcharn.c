@@ -17,7 +17,7 @@ static int		getwcharlen(unsigned char c)
 	int	len;
 
 	len = 0;
-	if (c >= 0 && c <= 127)
+	if (c <= 127)
 		len = 1;
 	else if (c >= 192 && c <= 223)
 		len = 2;
