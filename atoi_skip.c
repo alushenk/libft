@@ -14,21 +14,21 @@
 
 int	atoi_skip(char **str)
 {
-    int	result;
-    int	sign;
+	int result;
+	int sign;
 
-    result = 0;
-    sign = 1;
-    while (ft_isspace(**str))
-        (*str)++;
-    if (**str == '-')
-        sign = -1;
-    if (**str == '-' || **str == '+')
-        (*str)++;
-    while (ft_isdigit(**str))
-    {
-        result = result * 10 + (**str - '0');
-        (*str)++;
-    }
-    return (result * sign);
+	result = 0;
+	sign = 1;
+	while (ft_isspace(**str))
+		(*str)++;
+	if (**str == '-')
+		sign = -1;
+	if (**str == '-' || **str == '+')
+		(*str)++;
+	while (ft_isdigit(**str))
+	{
+		result = result * 10 + (**str - '0');
+		(*str)++;
+	}
+	return (result * sign);
 }
